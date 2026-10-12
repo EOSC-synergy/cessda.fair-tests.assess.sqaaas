@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.fair-tests:
+      branch: main
+      repo: https://github.com/cessda/cessda.fair-tests
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.fair-tests git:
+        commands:
+        - /usr/bin/env sh .sqa/script.turquoise_quirky_coyote.sh
+        container: qc.acc_coffee_brilliant_crocodile
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.fair-tests find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pearl_diplomatic_newt.sh
+        container: qc.doc_amaranth_thankful_alpaca
+      github.com/cessda/cessda.fair-tests git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cornflower_positive_hornbill.sh
+        container: qc.doc_caramel_warm_uakari
+      github.com/cessda/cessda.fair-tests markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.amaranth_tenacious_eel.sh
+        container: qc.doc_jasmine_audacious_chinchilla
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.fair-tests licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.viridian_confused_panther.sh
+        container: qc.lic_isabelline_forgiving_vulture
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.fair-tests cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.chili_polite_wolverine.sh
+        container: qc.met_aquamarine_dreamy_butterfly
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.fair-tests checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.mustard_vigilant_antelope.sh
+        container: qc.sty_gunmetal_impulsive_toad
+      github.com/cessda/cessda.fair-tests hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.mulberry_tactful_griffin.sh
+        container: qc.sty_turmeric_tough_squid
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.fair-tests get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.frost_humorous_pelican.sh
+        container: qc.ver_lavender_brave_seahorse
+timeout: 5400
