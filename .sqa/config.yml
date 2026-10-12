@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.fair-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.turquoise_quirky_coyote.sh
-        container: qc.acc_coffee_brilliant_crocodile
+        - /usr/bin/env sh .sqa/script.lapis_spontaneous_fox.sh
+        container: qc.acc_sage_artistic_uakari
   QC.Doc:
     repos:
       github.com/cessda/cessda.fair-tests find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pearl_diplomatic_newt.sh
-        container: qc.doc_amaranth_thankful_alpaca
+        - /usr/bin/env sh .sqa/script.tide_realistic_gull.sh
+        container: qc.doc_fuchsia_dedicated_camel
       github.com/cessda/cessda.fair-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.cornflower_positive_hornbill.sh
-        container: qc.doc_caramel_warm_uakari
+        - /usr/bin/env sh .sqa/script.snow_impulsive_cockatoo.sh
+        container: qc.doc_aqua_enthusiastic_sloth
       github.com/cessda/cessda.fair-tests markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.amaranth_tenacious_eel.sh
-        container: qc.doc_jasmine_audacious_chinchilla
+        - /usr/bin/env sh .sqa/script.jade_brilliant_leopard.sh
+        container: qc.doc_red_vibrant_rattlesnake
   QC.Lic:
     repos:
       github.com/cessda/cessda.fair-tests licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.viridian_confused_panther.sh
-        container: qc.lic_isabelline_forgiving_vulture
+        - /usr/bin/env sh .sqa/script.polar_harmonious_goose.sh
+        container: qc.lic_silver_generous_capybara
   QC.Met:
     repos:
       github.com/cessda/cessda.fair-tests cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.chili_polite_wolverine.sh
-        container: qc.met_aquamarine_dreamy_butterfly
+        - /usr/bin/env sh .sqa/script.moss_generous_moth.sh
+        container: qc.met_coffee_diligent_emu
   QC.Sty:
     repos:
       github.com/cessda/cessda.fair-tests checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.mustard_vigilant_antelope.sh
-        container: qc.sty_gunmetal_impulsive_toad
+        - /usr/bin/env sh .sqa/script.seafoam_unique_otter.sh
+        container: qc.sty_peony_mature_dolphin
       github.com/cessda/cessda.fair-tests hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.mulberry_tactful_griffin.sh
-        container: qc.sty_turmeric_tough_squid
+        - /usr/bin/env sh .sqa/script.porcelain_daring_griffin.sh
+        container: qc.sty_aqua_delighted_bison
   QC.Ver:
     repos:
       github.com/cessda/cessda.fair-tests get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frost_humorous_pelican.sh
-        container: qc.ver_lavender_brave_seahorse
+        - /usr/bin/env sh .sqa/script.reef_articulate_tortoise.sh
+        container: qc.ver_butter_fearless_orangutan
 timeout: 5400
